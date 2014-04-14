@@ -30,7 +30,6 @@ storeno <- unique(train$Store)
 summary(storeno)
 
 
-?fivenum
 rb <- boxplot(Weekly_Sales ~ Dept, data=train, subset=train$Store == 1)
 yi = tapply(train$Weekly_Sales[train$Store == 1], train$Dept[train$Store == 1], median)
 xi = 0.3 + seq(rb$n)
